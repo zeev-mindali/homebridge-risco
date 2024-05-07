@@ -6,11 +6,10 @@ const riscoPartDevice = require('./lib/RiscoPartDevices').RiscoCPPartitions;
 const riscoSystemDevice = require('./lib/RiscoPartDevices').RiscoCPSystem;
 const riscoCombinedDevice = require('./lib/RiscoCombinedDevices');
 const RiscoTCPPanel = require('risco-lan-bridge');
-
 var pjson = require('./package.json');
-let Manufacturer = 'Gawindx';
-const pluginName = 'homebridge-risco-local-platform';
-const platformName = 'RiscoLocalAlarm';
+let Manufacturer = 'Touchwand';
+const pluginName = 'homebridge-touchwand-risco';
+const platformName = 'RiscoTouchWand';
 
 let hap;
 let Service, Characteristic, UUIDGen;
@@ -122,10 +121,16 @@ class RiscoLanPlatform {
                 this.log.info('Initialising LightSys Panel');
                 this.RiscoPanel = new RiscoTCPPanel.LightSys(this.PanelOptions);
                 break;
+            case 'lightsyspro':
+                this.log.info('Initialising LightSys Pro panel');
+                this.RiscoPanel = new RiscoTCPPanel.LightSysPro(this.PanelOptions);
             case 'lightsysplus': // Add by @Needles77
                 this.log.info('Initialising LightSysPlus Panel');
                 this.RiscoPanel = new RiscoTCPPanel.LightSysPlus(this.PanelOptions);
                 break;
+            case 'lighsyspro':
+                this.log.info('Initialising LightSysPlus Panel');
+                this.RiscoPanel = new RiscoTCPPanel.LightSysPlus(this.PanelOptions);
             case 'prosysplus':
                 this.log.info('Initialising ProSysPlus Panel');
                 this.RiscoPanel = new RiscoTCPPanel.ProsysPlus(this.PanelOptions);

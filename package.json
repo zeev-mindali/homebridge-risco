@@ -1,9 +1,9 @@
 {
   "name": "homebridge-touchwand-risco",
   "displayName": "Homebridge touchwand risco support",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "RiscoAlarm on Local Network Plugin Platform for Homebridge",
-  "homepage": "https://github.com/gawindx/homebridge-risco-local-platform#readme",
+  "homepage": "https://github.com/zeev-mindali/homebridge-risco.git",
   "license": "MIT",
   "author": "Gawindx",
   "publishConfig": {
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeev-mindali/homebridge-risco-local-platform.git"
+    "url": "git+https://github.com/zeev-mindali/homebridge-risco.git"
   },
   "bugs": {
-    "url": "https://github.com/zeev-mindali/homebridge-risco-local-platform/issues"
+    "url": "hhttps://github.com/zeev-mindali/homebridge-risco.git"
   },
   "main": "app.js",
   "engines": {
@@ -35,7 +35,7 @@
     "homebridge",
     "tcp/ip"
   ],
-  "dependencies": {
-    "risco-lan-bridge": "https://github.com/needles77/risco-lan-bridge.git"
-  }
+"dependencies": {
+  "touchwand-bridge": "^0.1.0"
+}
 }
